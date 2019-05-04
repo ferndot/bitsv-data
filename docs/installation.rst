@@ -12,7 +12,7 @@ To install bitsv-data, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install bitsv_data
+    $ pip install bitsv-data
 
 This is the preferred method to install bitsv-data, as it will always install the most recent stable release.
 
@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/joshua-s/bitsv_data
+    $ git clone git://github.com/joshua-s/bitsv-data
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/joshua-s/bitsv_data/tarball/master
+    $ curl  -OL https://github.com/joshua-s/bitsv-data/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/joshua-s/bitsv_data
-.. _tarball: https://github.com/joshua-s/bitsv_data/tarball/master
+.. _Github repo: https://github.com/joshua-s/bitsv-data
+.. _tarball: https://github.com/joshua-s/bitsv-data/tarball/master

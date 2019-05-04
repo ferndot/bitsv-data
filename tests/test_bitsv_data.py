@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Tests for `bitsv_data` package."""
+"""Tests for `bitsv-data` package."""
 
 import pytest
 
 
-from bitsv_data import bitsv_data
+from bitsv_data import store_data, load_data
 
 
 @pytest.fixture

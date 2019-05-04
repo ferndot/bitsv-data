@@ -3,19 +3,19 @@ bitsv-data
 ==========
 
 
-.. image:: https://img.shields.io/pypi/v/bitsv_data.svg
-        :target: https://pypi.python.org/pypi/bitsv_data
+.. image:: https://img.shields.io/pypi/v/bitsv-data.svg
+        :target: https://pypi.python.org/pypi/bitsv-data
 
-.. image:: https://img.shields.io/travis/joshua-s/bitsv_data.svg
-        :target: https://travis-ci.org/joshua-s/bitsv_data
+.. image:: https://img.shields.io/travis/joshua-s/bitsv-data.svg
+        :target: https://travis-ci.org/joshua-s/bitsv-data
 
 .. image:: https://readthedocs.org/projects/bitsv-data/badge/?version=latest
         :target: https://bitsv-data.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/joshua-s/bitsv_data/shield.svg
-     :target: https://pyup.io/repos/github/joshua-s/bitsv_data/
+.. image:: https://pyup.io/repos/github/joshua-s/bitsv-data/shield.svg
+     :target: https://pyup.io/repos/github/joshua-s/bitsv-data/
      :alt: Updates
 
 
