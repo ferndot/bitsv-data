@@ -1,24 +1,23 @@
 # -*- coding: utf-8 -*-
-import json
-
 from bitsv.network import NetworkAPI
 
 
 def store_data(key, data):
     """
-    Stores a python object on the blockchain
+    Stores data on the blockchain
 
+    :param key: The key to use for the transaction
     :param data: The data to store
     :returns: The completed transaction's ID
     """
 
-    transaction_data = [(json.dumps(data), 'utf-8')]
+    transaction_data = [(data, 'utf-8')]
     return key.send_op_return(transaction_data)['data']['txid']
 
 
-def load_data(key, transaction_id):
+def load_data(transaction_id):
     """
-    Retrieves data from the blockchain
+    Retrieves a data transaction from the blockchain
 
     :param transaction_id: The transaction ID to look up
     """
@@ -29,10 +28,26 @@ def load_data(key, transaction_id):
     # Get data
     data = transaction['data']['vout'][1]['scriptPubKey']['hex']
 
-    # Decode to utf-8
-    data = bytes.fromhex(data).decode('utf-8')
+    # Decode to bytes
+    data = bytes.fromhex(data)
 
-    # Decode from json
-    data = json.loads(data[2:])
+    # Handle op codes
+    if data[1] == 76:
+        # Clear 3 bytes
+        data = data[2:]
+
+    elif data[1] == 77:
+        # Clear 4 bytes
+        data = data[3:]
+
+    elif data[1] == 78:
+        # Clear 6 bytes
+        data = data[5:]
+
+    else:
+        data = data[1:]
+
+    # Decode into utf-8
+    data = data.decode('utf-8', errors='ignore')
 
     return data
