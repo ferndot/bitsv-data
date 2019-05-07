@@ -37,12 +37,12 @@ def load_data(transaction_id):
         data = data[2:]
 
     elif data[1] == 77:
-        # Clear 4 bytes
-        data = data[3:]
+        # Clear 5 bytes
+        data = data[4:]
 
     elif data[1] == 78:
-        # Clear 6 bytes
-        data = data[5:]
+        # Clear 7 bytes
+        data = data[6:]
 
     else:
         data = data[1:]
